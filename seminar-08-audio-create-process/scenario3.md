@@ -60,5 +60,5 @@ Lossless сохраняет идеальное качество, но заним
 
 
 
-ССЫЛКА НА ГУГЛ ДИСК С ВИДЕО: https://drive.google.com/drive/folders/1ixCNb1_sOerdyZfW5L5hw2AwxXzf7tv5?usp=sharing
+ССЫЛКА НА ВИДЕО: https://drive.google.com/file/d/1eYA-Qi8oVUPU3Gt0R3-KbLxoZoDP_Ut7/view?usp=drive_link
 ВИДЕО: isitAudio(1).mp4
