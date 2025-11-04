@@ -163,8 +163,6 @@ flowchart LR
     B2 --> C3["VoIP / Игры (Opus)"]
     C1 --> D["Долгосрочное хранение"]
     C2 --> E["Пользовательский опыт / экономия трафика"]
-    style A fill:#f9f,stroke:#333,stroke-width:1px
-    style B1 fill:#efe,stroke:#333
-    style B2 fill:#fee,stroke:#333
 ```
+
 
