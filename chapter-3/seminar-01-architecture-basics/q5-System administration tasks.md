@@ -203,10 +203,7 @@ flowchart TD
 
 ## Источники
 
-1.Quicksupport.ie. System Administration Services for Optimal IT Management [Электронный ресурс]. – Статья на англ. языке; при подготовке доклада использован перевод с помощью онлайн-переводчика.
-
+1.Quicksupport.ie. System Administration Services for Optimal IT Management (база).
 2.Учебные материалы по административному и процедурному уровням обеспечения информационной безопасности и поддержанию работоспособности информационных систем. Электронные конспекты и методические разработки на образовательных порталах (Studfile, Infourok)
-
 3.Материалы по ITSM/ITIL (incident, problem, change management). Обзоры и практические руководства компаний ManageEngine, Atlassian.
-
 4.Статьи о резервном копировании и восстановлении данных. Публикации компаний Veeam, Bacula Systems, ObjectFirst.
