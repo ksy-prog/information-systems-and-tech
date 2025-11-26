@@ -97,17 +97,35 @@
 }
 
 
-% -------------------- содержание --------------------
-\renewcommand{\contentsname}{\textbf{СОДЕРЖАНИЕ}}
-\setlength{\cftbeforesecskip}{3pt}
-\setlength{\cftbeforesubsecskip}{2pt}
-\addto\captionsrussian{\renewcommand{\contentsname}{СОДЕРЖАНИЕ}}
+% ------------------ содержание (оформление через tocloft) ------------------
+% отступы между секциями
+\setlength{\cftbeforesecskip}{-3pt}
+
+% уменьшить вертикальный промежуток вокруг заголовка оглавления
+\setlength{\cftbeforetoctitleskip}{20pt}
+\setlength{\cftaftertoctitleskip}{-6pt}
+
+% точки-лидеры для всех уровней
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% расстояние между точками
+\renewcommand{\cftdotsep}{1}
+
+% отступы и ширины: первая длина — отступ метки (номер секции), вторая — ширина номера страницы
+\cftsetindents{section}{0em}{1em}
+\cftsetindents{subsection}{1em}{1.5em}
+
+% убрать жирность названий в секциях содержания
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\normalfont}
+
+% ширина поля номера страницы и правый отступ
+\cftsetpnumwidth{2em}
 
 % -------------------- список литературы --------------------
 \defbibheading{bibliography}[\bibname]{%
-    \section*{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}%
-    \addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}%
+    \section*{Список использованных источников}%
+    \addcontentsline{toc}{section}{Список использованных источников}%
 }
-
-
-
