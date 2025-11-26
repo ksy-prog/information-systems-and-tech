@@ -20,6 +20,18 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{csquotes}
 
+% -------------------- исправление переполнения строк --------------------
+% пакет microtype для улучшения переносов и выравнивания
+\RequirePackage{microtype}
+
+% пакет xurl для корректных переносов URL
+\RequirePackage{xurl}
+
+% глобальные настройки переносов
+\tolerance=1000              % допуск к "плохим" строкам
+\emergencystretch=3em        % дополнительное растяжение
+\hfuzz=0.5pt                 % допустимое выступание
+
 % biblatex с правильной конфигурацией для русского языка
 \RequirePackage{csquotes}
 \RequirePackage[
@@ -27,8 +39,62 @@
     backend=biber,
     sorting=none,
     autolang=other,
-    language=auto
+    language=auto,
+    maxnames=3,           % показывать до 3 авторов
+    minnames=1,           % минимум 1 автор перед [и др.]
+    movenames=false,      % не переносить авторов
+    url=true,             % показывать URL
+    doi=true,             % показывать DOI
+    eprint=false          % не показывать eprint
 ]{biblatex}
+
+
+% -------------------- настройка библиографии --------------------
+\DeclareFieldFormat{labelnumberwidth}{#1.}
+
+% настройка отступов в библиографии (абзацный отступ 12.5mm)
+\setlength{\bibhang}{0pt}           % убираем висячий отступ
+\setlength{\biblabelsep}{0.5em}     % отступ между номером и текстом
+\setlength{\bibitemsep}{0pt}        % интервал между записями
+\setlength{\bibnamesep}{0pt}        % интервал между авторами
+\setlength{\bibinitsep}{0pt}        % интервал между инициалами
+
+% формат для электронных ресурсов
+\DeclareFieldFormat{url}{\mkbibacro{URL}\addcolon\space\url{#1}}
+\DeclareFieldFormat{urldate}{(дата обращения\addcolon\space#1)}
+
+% формат для [Электронный ресурс]
+\DefineBibliographyStrings{russian}{%
+    urlfrom = {Режим доступа},
+    urlseen = {дата обращения},
+    mathesis = {магистерская диссертация},
+    phdthesis = {кандидатская диссертация},
+}
+
+% переопределяем вывод URL для соответствия ГОСТ
+\DeclareFieldFormat{url}{%
+    [Электронный ресурс]. -- Режим доступа\addcolon\space\url{#1}%
+}
+
+% настройка нумерации - каждая запись с новой строки с абзацным отступом
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{%
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \setlength{\itemindent}{\parindent}%  % абзацный отступ
+      \addtolength{\leftmargin}{-\leftmargin} % сброс левого отступа
+      \addtolength{\itemindent}{\labelwidth}%
+      \addtolength{\itemindent}{\labelsep}}}
+  {\endlist}
+  {\item}
+
 
 % настройка полей страницы по СТУ
 \geometry{
@@ -125,7 +191,8 @@
 \cftsetpnumwidth{2em}
 
 % -------------------- список литературы --------------------
-\defbibheading{bibliography}[\bibname]{%
-    \section*{Список использованных источников}%
+\defbibheading{bibliography}[{\bibname}]{%
+    \section*{\begin{center}\MakeUppercase{Список использованных источников}\end{center}}%
+    \vspace*{-2.3em}
     \addcontentsline{toc}{section}{Список использованных источников}%
 }
