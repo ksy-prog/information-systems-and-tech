@@ -49,10 +49,10 @@
 ]{biblatex}
 
 
-% -------------------- настройка библиографии --------------------
+% -------------------- настройки библиографии --------------------
 \DeclareFieldFormat{labelnumberwidth}{#1.}
 
-% настройка отступов в библиографии (абзацный отступ 12.5mm)
+% Настройка отступов в библиографии (абзацный отступ 12.5mm)
 \setlength{\bibhang}{0pt}           % убираем висячий отступ
 \setlength{\biblabelsep}{0.5em}     % отступ между номером и текстом
 \setlength{\bibitemsep}{0pt}        % интервал между записями
@@ -89,7 +89,7 @@
       \setlength{\itemsep}{\bibitemsep}%
       \setlength{\parsep}{\bibparsep}%
       \setlength{\itemindent}{\parindent}%  % абзацный отступ
-      \addtolength{\leftmargin}{-\leftmargin} % сброс левого отступа
+      \addtolength{\leftmargin}{-\leftmargin}% сброс левого отступа
       \addtolength{\itemindent}{\labelwidth}%
       \addtolength{\itemindent}{\labelsep}}}
   {\endlist}
@@ -181,11 +181,13 @@
 % отступы и ширины: первая длина — отступ метки (номер секции), вторая — ширина номера страницы
 \cftsetindents{section}{0em}{1em}
 \cftsetindents{subsection}{1em}{1.5em}
+\cftsetindents{subsubsection}{2.6em}{2.3em}
 
 % убрать жирность названий в секциях содержания
 \renewcommand{\cftsecfont}{\normalfont}
 \renewcommand{\cftsecpagefont}{\normalfont}
 \renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftsubsubsecfont}{\normalfont}
 
 % ширина поля номера страницы и правый отступ
 \cftsetpnumwidth{2em}
