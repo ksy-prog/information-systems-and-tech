@@ -28,9 +28,9 @@
 \RequirePackage{xurl}
 
 % глобальные настройки переносов
-\tolerance=1000              % допуск к "плохим" строкам
-\emergencystretch=3em        % дополнительное растяжение
-\hfuzz=0.5pt                 % допустимое выступание
+\tolerance=1000 % допуск к "плохим" строкам
+\emergencystretch=3em % дополнительное растяжение
+\hfuzz=0.5pt % допустимое выступание
 
 % biblatex с правильной конфигурацией для русского языка
 \RequirePackage{csquotes}
@@ -40,12 +40,12 @@
     sorting=none,
     autolang=other,
     language=auto,
-    maxnames=3,           % показывать до 3 авторов
-    minnames=1,           % минимум 1 автор перед [и др.]
-    movenames=false,      % не переносить авторов
-    url=true,             % показывать URL
-    doi=true,             % показывать DOI
-    eprint=false          % не показывать eprint
+    maxnames=3, % показывать до 3 авторов
+    minnames=1, % минимум 1 автор перед [и др.]
+    movenames=false, % не переносить авторов
+    url=true, % показывать URL
+    doi=true, % показывать DOI
+    eprint=false % не показывать eprint
 ]{biblatex}
 
 
@@ -64,7 +64,7 @@
 \DeclareFieldFormat{urldate}{(дата обращения\addcolon\space#1)}
 
 % формат для [Электронный ресурс]
-\DefineBibliographyStrings{russian}{%
+\DefineBibliographyStrings{russian}{
     urlfrom = {Режим доступа},
     urlseen = {дата обращения},
     mathesis = {магистерская диссертация},
@@ -72,25 +72,25 @@
 }
 
 % переопределяем вывод URL для соответствия ГОСТ
-\DeclareFieldFormat{url}{%
+\DeclareFieldFormat{url}{
     [Электронный ресурс]. -- Режим доступа\addcolon\space\url{#1}%
 }
 
 % настройка нумерации - каждая запись с новой строки с абзацным отступом
 \defbibenvironment{bibliography}
   {\list
-     {\printtext[labelnumberwidth]{%
-        \printfield{labelprefix}%
+     {\printtext[labelnumberwidth]{
+        \printfield{labelprefix}
         \printfield{labelnumber}}}
-     {\setlength{\labelwidth}{\labelnumberwidth}%
-      \setlength{\leftmargin}{\labelwidth}%
-      \setlength{\labelsep}{\biblabelsep}%
-      \addtolength{\leftmargin}{\labelsep}%
-      \setlength{\itemsep}{\bibitemsep}%
-      \setlength{\parsep}{\bibparsep}%
-      \setlength{\itemindent}{\parindent}%  % абзацный отступ
+     {\setlength{\labelwidth}{\labelnumberwidth}
+      \setlength{\leftmargin}{\labelwidth}
+      \setlength{\labelsep}{\biblabelsep}
+      \addtolength{\leftmargin}{\labelsep}
+      \setlength{\itemsep}{\bibitemsep}
+      \setlength{\parsep}{\bibparsep}
+      \setlength{\itemindent}{\parindent}% абзацный отступ
       \addtolength{\leftmargin}{-\leftmargin}% сброс левого отступа
-      \addtolength{\itemindent}{\labelwidth}%
+      \addtolength{\itemindent}{\labelwidth}
       \addtolength{\itemindent}{\labelsep}}}
   {\endlist}
   {\item}
@@ -122,7 +122,22 @@
 \pagenumbering{arabic}
 \pagestyle{plain}
 
-% определяем удобную команду с 5 аргументами
+% ------------- макросы для ручной нумерации и печати заголовков -------------
+% \ManualSubsection{<title>} -- для subsection
+\newcommand{\ManualSubsection}[1]{
+    \refstepcounter{subsection}
+    \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}
+    \begin{center}\textbf{\thesubsection\ #1}\end{center}
+}
+
+% \ManualSubsubsection{<title>} -- аналогично для subsubsection
+\newcommand{\ManualSubsubsection}[1]{
+    \refstepcounter{subsubsection}
+    \addcontentsline{toc}{subsubsection}{\protect\numberline{\thesubsubsection}#1}
+    \begin{center}\textbf{\thesubsubsection\ #1}\end{center}
+}
+
+% определяем удобную команду с 5 аргументами (макрос) для титульника
 \newcommand{\mycovertitle}[5]{%
 \begin{titlepage}
 \thispagestyle{empty}
@@ -156,7 +171,7 @@
 
 \vfill
 
-Красноярск \the\year
+Красноярск 2025
 \end{center}
 \end{titlepage}
 \clearpage
