@@ -201,4 +201,40 @@ flowchart TD
 
 Именно качественная ежедневная работа администратора обеспечивает для организации привычную вещь – «всё просто работает», несмотря на сложность современной архитектуры информационных систем.
 
+## Источники
 
+1. AttuneOps. *System Administrator Roles and Responsibilities: The Complete Guide*. – 2025. –  
+   URL: https://attuneops.io/system-administrator-roles-and-responsibilities/  
+   (дата обращения: 26.11.2025).
+
+2. Freelance.co.uk. *System Administrator Career Guide: What You'll Actually Do Day-to-Day (2025)*. – 2025. –  
+   URL: https://www.freelance.co.uk/blog/system-administrator-roles-skills-and-career-path/  
+   (дата обращения: 26.11.2025).
+
+3. Alooba. *Systems Administration: Everything You Need to Know When Assessing Systems Administration Skills*. – 2025. –  
+   URL: https://www.alooba.com/skills/experience/systems-administration-339/  
+   (дата обращения: 26.11.2025).
+
+4. QuickSupport. *System Administration Services for Optimal IT Management*. – 2024. –  
+   URL: https://quicksupport.ie/system-administration-services-for-optimal-it-management/  
+   (дата обращения: 26.11.2025).
+
+5. Галатенко В. А. *Основы информационной безопасности* : учебное пособие. – М. : Национальный открытый университет «ИНТУИТ», 2003. –  
+   URL: https://www.intuit.ru/studies/courses/1101/141/info  
+   (дата обращения: 26.11.2025).
+
+6. IT@Cornell. *Incident, Request, Problem, Change*. – 2024. –  
+   URL: https://it.cornell.edu/it-service-management/incident-request-problem-change  
+   (дата обращения: 26.11.2025).
+
+7. Sam S. K. *Incident Management vs Problem Management vs Change Management: Key Information to Know and Trends to Understand*. – 2025. –  
+   URL: https://www.rezolve.ai/blog/incident-management-vs-problem-management-vs-change-management  
+   (дата обращения: 26.11.2025).
+
+8. Atlassian. *Problem Management in ITIL: Process & Implementation Guide*. – 2024. –  
+   URL: https://www.atlassian.com/itsm/problem-management  
+   (дата обращения: 26.11.2025).
+
+9. Furst Morgado J. *What is the 3-2-1 Backup Rule?* – 2024. –  
+   URL: https://www.veeam.com/blog/321-backup-rule.html  
+   (дата обращения: 26.11.2025).
