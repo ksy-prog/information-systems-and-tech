@@ -172,8 +172,8 @@ flowchart TB
     subgraph VDI["Инфраструктура VDI"]
         HV["Гипервизор"]
         VM1["ВМ 1<br/>(Windows 11)"]
-        VM2["ВМ 2<br/>(Windows 11)"]
-        VM3["ВМ 3<br/>(Windows 11)"]
+        VM2["ВМ 2<br/>(Linux)"]
+        VM3["ВМ 3<br/>(Windows 10)"]
         HV --> VM1
         HV --> VM2
         HV --> VM3
